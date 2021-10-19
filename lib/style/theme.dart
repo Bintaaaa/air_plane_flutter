@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+double defaultMargin = 24.0;
+double defaultRadius = 17.0;
+
 Color kPrimaryColor = Color(0xff5C40CC);
 Color kBlackColor = Color(0xff1F1449);
 Color kWhiteColor = Color(0xffFFFFFF);
@@ -31,7 +34,7 @@ TextStyle purpleTextStyle = GoogleFonts.poppins(
   color: kPrimaryColor
 );
 
-FontWeight light = FontWeight.w300;
+FontWeight ligth = FontWeight.w300;
 FontWeight reguler = FontWeight.w400;
 FontWeight medium = FontWeight.w500;
 FontWeight semiBold = FontWeight.w600;

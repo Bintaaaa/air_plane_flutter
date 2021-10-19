@@ -39,20 +39,22 @@ class GetStartedPage extends StatelessWidget {
                   "Explore new world with us and\nlet yourself get amazing experiences",
                   style: whiteTextStyle.copyWith(
                     fontSize: 16,
-                    fontWeight: light
+                    fontWeight: ligth
                   ),
                   textAlign: TextAlign.center,
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 24,bottom: 24),
+                  margin: EdgeInsets.only(top: defaultMargin,bottom: defaultMargin),
                   width: 220,
                   height: 50,
                   child: TextButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/sign-up-page');
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: kPrimaryColor,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(17)
+                        borderRadius: BorderRadius.circular(defaultRadius)
                       )
                     ),
                     child: Text(
