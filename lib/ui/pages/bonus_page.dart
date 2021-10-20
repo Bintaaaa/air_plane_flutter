@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import '../../style/theme.dart';
 
-class BonusPage extends StatelessWidget {
+class BonusPage extends StatefulWidget {
   const BonusPage({Key? key}) : super(key: key);
 
+  @override
+  _BonusPageState createState() => _BonusPageState();
+}
+
+class _BonusPageState extends State<BonusPage> {
   Widget bonusCard() {
     return Container(
       width: 300,
@@ -94,7 +99,9 @@ class BonusPage extends StatelessWidget {
       height: 55,
       margin: EdgeInsets.only(top: defaultMargin * 2),
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, '/main');
+        },
         style: TextButton.styleFrom(
             backgroundColor: kPrimaryColor,
             shape: RoundedRectangleBorder(
