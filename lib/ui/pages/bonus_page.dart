@@ -1,3 +1,4 @@
+import 'package:air_plane/ui/widgets/item_button.dart';
 import 'package:flutter/material.dart';
 import '../../style/theme.dart';
 
@@ -93,27 +94,6 @@ class _BonusPageState extends State<BonusPage> {
     );
   }
 
-  Widget startButton() {
-    return Container(
-      width: 220,
-      height: 55,
-      margin: EdgeInsets.only(top: defaultMargin * 2),
-      child: TextButton(
-        onPressed: () {
-          Navigator.pushNamed(context, '/main');
-        },
-        style: TextButton.styleFrom(
-            backgroundColor: kPrimaryColor,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(17))),
-        child: Text(
-          "Start Fly Now",
-          style: whiteTextStyle.copyWith(fontSize: 18, fontWeight: medium),
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -125,7 +105,10 @@ class _BonusPageState extends State<BonusPage> {
             bonusCard(),
             bonusTitle(),
             bonusSubtitle(),
-            startButton(),
+            SizedBox(height: 30),
+            ItemButton(title: "Start Fly Now",width: 220, onPressed: (){
+              Navigator.pushNamed(context, '/main');
+            },),
           ],
         ),
       ),
