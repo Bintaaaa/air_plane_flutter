@@ -1,6 +1,7 @@
 import 'package:air_plane/ui/widgets/item_bottom_navigation.dart';
 import 'package:flutter/material.dart';
 import '../../style/theme.dart';
+import 'home_page.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -32,10 +33,14 @@ class MainPage extends StatelessWidget {
       );
     }
 
+    Widget buildContent(){
+      return HomePage();
+    }
 
     return Scaffold(
       body: Stack(
         children: [
+          buildContent(),
           bottomNavigation()
         ],
       ),
