@@ -19,28 +19,26 @@ class SignUpPage extends StatelessWidget {
       );
     }
 
-    Widget inputSection(){
 
-
-
-      Widget submitButtom(){
-        return ItemButton(title: "Submit", onPressed: (){
-          Navigator.pushNamed(context, '/bonus');
-        },);
-      }
-
-      Widget tacButton(){
-        return Container(
-          margin: EdgeInsets.only(top: defaultMargin*2, bottom: 50),
-          child: Text("Terms and Conditions",
+    Widget submitButtom(){
+      return ItemButton(title: "Submit", onPressed: (){
+        Navigator.pushNamed(context, '/bonus');
+      },);
+    }
+    Widget tacButton(){
+      return Container(
+        margin: EdgeInsets.only(top: defaultMargin*2, bottom: 50),
+        child: Text("Terms and Conditions",
           style: greyTextStyle.copyWith(
               fontSize: 16,
               fontWeight: ligth,
-            decoration: TextDecoration.underline
+              decoration: TextDecoration.underline
           ),
-          ),
-        );
-      }
+        ),
+      );
+    }
+
+    Widget inputSection(){
 
       return Container(
         margin: EdgeInsets.only(top: defaultMargin),
@@ -74,7 +72,7 @@ class SignUpPage extends StatelessWidget {
           ),
           children: [
             title(),
-            inputSection()
+            inputSection(),
           ],
         ),
       ),
