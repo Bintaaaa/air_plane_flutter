@@ -192,7 +192,9 @@ class DetailPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        ItemButton(title: "Book Now", width: 130, onPressed: (){})
+                        ItemButton(title: "Book Now", width: 130, onPressed: (){
+                          Navigator.pushNamed(context, "/choose-seat");
+                        })
                       ],
                     ),
                   ),
