@@ -26,6 +26,8 @@ dependencies:
 
   #Google Fonts
   google_fonts: ^2.1.0
+  #Flutter Bloc
+  flutter_bloc: ^7.3.1
 
 
   # The following adds the Cupertino Icons font to your application.
